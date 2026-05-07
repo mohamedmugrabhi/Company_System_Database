@@ -381,3 +381,6 @@ DELETE FROM Works_On
 WHERE hours < 5;
 
 SET SQL_SAFE_UPDATES = 1;
+
+
+-- End of Project

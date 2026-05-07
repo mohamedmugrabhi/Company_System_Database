@@ -12,9 +12,9 @@
  - Aggregate Functions
 */
 
-CREATE DATABASE IF NOT EXISTS CompanySystem;
+DROP DATABASE IF EXISTS CompanySystem;
+CREATE DATABASE CompanySystem;
 USE CompanySystem;
-
 -- =====================================
 -- Department Table
 -- =====================================
@@ -375,5 +375,9 @@ UPDATE Staff
 SET salary = salary + 1000
 WHERE department_id = 1;
 
+SET SQL_SAFE_UPDATES = 0;
+
 DELETE FROM Works_On
 WHERE hours < 5;
+
+SET SQL_SAFE_UPDATES = 1;
